@@ -1,0 +1,6 @@
+{
+  "name": "SHRI JI JEWELS - Luxury Jewellery",
+  "description": "Divine by Tradition, Timeless by Trust. Premium Royal Luxury Jewellery Store featuring handcrafted Chains, Rings, Bangles & Kada, Bracelets, and Devotional Pendants.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
