@@ -70,3 +70,81 @@
 .luxury-card-shadow {
   box-shadow: 0 4px 20px -2px rgba(36, 26, 21, 0.05);
 }
+
+/* Luxury Double-Strip Synchronized Running Announcement */
+@keyframes announcement-ltr {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes champagne-gold-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.announcement-strip-surface {
+  background: linear-gradient(
+    90deg,
+    #21140E 0%,
+    #311E15 25%,
+    #3B251A 50%,
+    #311E15 75%,
+    #21140E 100%
+  );
+}
+
+.announcement-marquee-viewport {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%);
+}
+
+.announcement-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(-50%, 0, 0);
+  animation: announcement-ltr 36s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .announcement-track {
+    animation-duration: 44s;
+  }
+}
+
+.announcement-gold-shimmer {
+  display: inline-block;
+  background-image: linear-gradient(
+    105deg,
+    #E8CE9B 0%,
+    #F7EBD5 16%,
+    #FFFDF7 25%,
+    #F4E4C6 34%,
+    #E8CE9B 50%,
+    #F7EBD5 66%,
+    #FFFDF7 75%,
+    #F4E4C6 84%,
+    #E8CE9B 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(14, 8, 5, 0.45));
+  animation: champagne-gold-shimmer 7.5s linear infinite;
+}
+
+

@@ -41,26 +41,60 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <header className="sticky top-0 z-40 bg-[#493326] border-b border-[#C5A36A]/30 shadow-md transition-colors">
-        {/* Top Micro Announcement Bar (Deep Espresso Tint) */}
-        <div className="bg-[#2D1C14] text-[#E8D4B2] text-[10px] sm:text-[11px] font-medium tracking-widest text-center py-1.5 px-4 flex items-center justify-between uppercase border-b border-[#C5A36A]/15">
-          <span className="hidden lg:inline">Divine By Tradition · Timeless By Trust</span>
-          <span className="mx-auto sm:mx-0">Handcrafted Royal 22K Luxury Polish · ₹200 Advance Dispatch</span>
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href="mailto:Shrijijewels2908@gmail.com"
-              className="hover:text-[#C5A36A] transition-colors lowercase font-mono text-[11px]"
-            >
-              Shrijijewels2908@gmail.com
-            </a>
-            <span>•</span>
-            <a
-              href="https://wa.me/919315741495"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#C5A36A] transition-colors"
-            >
-              WhatsApp: +91 9315741495
-            </a>
+        {/* Top Luxury Double-Strip Synchronized Running Announcement */}
+        <div
+          className="flex flex-col gap-[2px] bg-[#180E0A] border-b border-[#D4B072]/25 select-none overflow-hidden"
+          role="region"
+          aria-label="Store Announcements"
+        >
+          <span className="sr-only">
+            Handcrafted Royal 22k Luxury Polish. 200 advance for order confirmation.
+          </span>
+
+          {/* Strip 1 */}
+          <div className="announcement-strip-surface h-8 sm:h-9 flex items-center overflow-hidden">
+            <div className="announcement-marquee-viewport">
+              <div className="announcement-track">
+                {[0, 1].map((halfIdx) => (
+                  <div key={halfIdx} className="flex items-center shrink-0">
+                    {[0, 1, 2, 3, 4, 5, 6].map((repeatIdx) => (
+                      <span
+                        key={repeatIdx}
+                        aria-hidden={halfIdx !== 0 || repeatIdx !== 0}
+                        className="w-[370px] sm:w-[460px] shrink-0 flex items-center justify-center whitespace-nowrap font-luxury-serif font-semibold text-[14.5px] sm:text-[16px] tracking-[0.12em] leading-none"
+                      >
+                        <span className="announcement-gold-shimmer">
+                          Handcrafted Royal 22k Luxury Polish
+                        </span>
+                      </span>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Strip 2 */}
+          <div className="announcement-strip-surface h-8 sm:h-9 flex items-center overflow-hidden">
+            <div className="announcement-marquee-viewport">
+              <div className="announcement-track">
+                {[0, 1].map((halfIdx) => (
+                  <div key={halfIdx} className="flex items-center shrink-0">
+                    {[0, 1, 2, 3, 4, 5, 6].map((repeatIdx) => (
+                      <span
+                        key={repeatIdx}
+                        aria-hidden={halfIdx !== 0 || repeatIdx !== 0}
+                        className="w-[370px] sm:w-[460px] shrink-0 flex items-center justify-center whitespace-nowrap font-luxury-serif font-semibold text-[14.5px] sm:text-[16px] tracking-[0.12em] leading-none"
+                      >
+                        <span className="announcement-gold-shimmer">
+                          200 advance for order confirmation
+                        </span>
+                      </span>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
